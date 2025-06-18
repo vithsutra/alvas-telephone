@@ -6,7 +6,7 @@ export async function handleLogin(username: string, password: string) {
     admin_name:username,
     password,
   };
-
+console.log(secret)
   try {
     const response = await axios.post(`${secret}/login/admin`, data, {
       headers: { "content-type": "application/json" },

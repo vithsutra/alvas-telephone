@@ -6,3 +6,4 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const secret = process.env.NEXT_PUBLIC_API
+console.log(secret)
