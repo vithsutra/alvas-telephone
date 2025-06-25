@@ -53,43 +53,27 @@ export default function User() {
             className="w-full hover:bg-muted/10 shadow-md ease-in-out duration-300"
             key={user_id}
           >
-            <CardHeader className="py-2">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                {/* USER NAME with truncation + tooltip */}
-                <CardTitle
-                  className="text-md font-normal text-muted-foreground truncate max-w-full sm:max-w-[150px]"
-                  title={user_name}
-                >
-                  {user_name}
-                </CardTitle>
-
-                {/* MACHINE ID */}
-                <div className="text-md font-medium text-yellow-500 truncate max-w-full sm:max-w-[100px]">
-                  {machine_id}
-                </div>
+            <CardHeader className="py-4 flex flex-col items-center justify-center text-center">
+              <CardTitle className="text-md font-normal text-muted-foreground/80">
+                {user_name}
+              </CardTitle>
+              <div className="text-md font-medium text-yellow-500">
+                {machine_id}
               </div>
             </CardHeader>
 
-            {/* EMAIL */}
             <CardContent className="text-center text-lg font-normal text-primary break-words">
               <span className="font-bold">{email}</span>
             </CardContent>
 
-            {/* MENU */}
             <CardFooter className="flex justify-end">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="text-sm w-8 h-8 p-0 ">
+                  <Button variant="outline" className="text-sm w-8 h-8 p-0">
                     <Ellipsis size={16} />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  {/* <DropdownMenuItem
-                    className="text-red-600 cursor-pointer hover:text-red-500"
-                    onClick={() => console.log("Delete user:", user_id)}
-                  >
-                    Delete
-                  </DropdownMenuItem> */}
                   <DeleteUserDialog id={user_id} />
                 </DropdownMenuContent>
               </DropdownMenu>

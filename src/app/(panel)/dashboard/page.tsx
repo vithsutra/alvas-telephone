@@ -18,7 +18,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Ellipsis } from "lucide-react";
-import { getMachines } from "@/hooks/panel/machines/getMachines"; 
+import { getMachines } from "@/hooks/panel/machines/getMachines";
 import { DeleteDialogInDropdown } from "@/components/panel/deleteMachines/alertDialof";
 
 export interface Machine {
@@ -52,7 +52,7 @@ export default function Home() {
             className="w-full hover:bg-muted/10 shadow-md hover:scale-102 ease-in-out duration-300"
             key={id}
           >
-            <CardHeader className="px-5">
+            <CardHeader className="px-5 ">
               <CardTitle className="text-center text-md font-normal text-muted-foreground/80">
                 {label}
               </CardTitle>

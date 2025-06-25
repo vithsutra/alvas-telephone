@@ -14,6 +14,7 @@ import { createUser } from "@/lib/panel/User/createUser";
 import { User } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { MachinesDropDown } from "./machines";
 
 export default function AddUser() {
   const [user_name, setName] = useState<string>();
@@ -137,15 +138,8 @@ export default function AddUser() {
           <div className="grid grid-cols-2 items-center gap-2 ">
             <Label htmlFor="name" className="text-right ">
               Id
-            </Label>
-            <Input
-              id="name"
-              type="text"
-              placeholder="Machine Id"
-              className="col-span-3"
-              value={machine_id}
-              onChange={(e) => setMachine_id(e.target.value)}
-            />
+            </Label> <br />
+            <MachinesDropDown />
           </div>
         </div>
         <DialogFooter>
